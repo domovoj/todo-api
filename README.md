@@ -18,11 +18,11 @@ API:
     * `GET`- Removes all todos
 
 # Example
-* `GET`
+* __GET__
     ```js
     fetch("/api/todos")
     ```
-* `POST`
+* __POST__
     ```js
     const headers = new Headers();
 
@@ -35,7 +35,7 @@ API:
     	headers
     })
     ```
-* `Delete`
+* __DELETE__
 
     ```js
     const headers = new Headers();
@@ -49,4 +49,3 @@ API:
     	headers
     })
     ```
-    
