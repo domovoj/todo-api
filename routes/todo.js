@@ -12,7 +12,7 @@ const post = (req, res) => {
 }
 
 const deleteTodo = (req, res) => {
-    Todo.findById(req.params.id)
+    Todo.findById(req.body.id)
         .then(todo => todo.destroy())
         .then(todo => res.json(todo))
 }
