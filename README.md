@@ -12,7 +12,7 @@ API:
 * `/api/todos` methods:
     * `GET` - Returns all todos
     * `POST` - Creates new todo. Require body parameter `value`, `isChecked` - optional
-    * `Delete` - Deletes todo by id. Require body parameter `id`
+    * `DELETE` - Deletes todo by id. Require body parameter `id`
 
 * `/api/deleteAll` methods:
     * `GET`- Removes all todos
