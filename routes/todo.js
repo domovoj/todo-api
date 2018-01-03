@@ -18,10 +18,10 @@ const deleteTodo = (req, res) => {
 }
 
 
-const deleteAll = () => Todo.destroy({
+const deleteAll = (req, res) => Todo.destroy({
     where:    {},
     truncate: true
-})
+}).then(() => res.send('They were deleted'))
 
 module.exports = {
     get,
