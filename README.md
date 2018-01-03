@@ -9,14 +9,44 @@ Use the [*http://localhost:4000/*](http://localhost:4000/) for api
 
 API:
 
-* `/api/todos`
-    * GET
-        Returns all todos
-    * POST
-        Creates new todo. Require body parameter `value`, `isChecked` - optional
-    * Delete
-        Deletes todo by id. Require body parameter `id`
+* `/api/todos` methods:
+    * `GET` - Returns all todos
+    * `POST` - Creates new todo. Require body parameter `value`, `isChecked` - optional
+    * `Delete` - Deletes todo by id. Require body parameter `id`
 
-* `/api/deleteAll`
-    * GET
-        Removes all todos
+* `/api/deleteAll` methods:
+    * `GET`- Removes all todos
+
+# Example
+* `GET`
+    ```js
+    fetch("/api/todos")
+    ```
+* `POST`
+    ```js
+    const headers = new Headers();
+
+    headers.append('Accept', 'application/json');
+    headers.append('Content-Type', 'application/json');
+
+    fetch("/api/todos", {
+      	method: "POST",
+    	body: JSON.stringify({value: 'New todo'}),
+    	headers
+    })
+    ```
+* `Delete`
+
+    ```js
+    const headers = new Headers();
+
+    headers.append('Accept', 'application/json');
+    headers.append('Content-Type', 'application/json');
+
+    fetch("/api/todos", {
+      	method: "DELETE",
+    	body: JSON.stringify({id: 1}),
+    	headers
+    })
+    ```
+    
