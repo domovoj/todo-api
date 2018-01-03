@@ -18,4 +18,4 @@ const Todo = sequelize.define('todos', {
 
 Todo.sync()
 
-exports.Todo = Todo
+module.exports = Todo

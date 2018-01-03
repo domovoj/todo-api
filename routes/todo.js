@@ -1,4 +1,4 @@
-const Todo = require('../models/todo').Todo
+const Todo = require('../models/todo')
 
 const get = (req, res) => {
     Todo.findAll()
@@ -20,8 +20,7 @@ const deleteTodo = (req, res) => {
 
 const deleteAll = () => Todo.destroy({
     where:    {},
-    truncate: true,
-    cascade: false
+    truncate: true
 })
 
 module.exports = {
