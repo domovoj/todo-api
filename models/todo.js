@@ -17,17 +17,5 @@ const Todo = sequelize.define('todos', {
 })
 
 sequelize.sync()
-// sequelize.sync().then(() => {
-//     Todo.create({
-//         value:     'Do something 1',
-//         isChecked: false
-//     })
-//
-//     Todo.create({
-//         name:      "Do something 2",
-//         isChecked: false
-//     })
-// })
-
 
 exports.Todo = Todo
