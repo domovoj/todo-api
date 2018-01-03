@@ -16,6 +16,6 @@ const Todo = sequelize.define('todos', {
     }
 })
 
-sequelize.sync()
+Todo.sync()
 
 exports.Todo = Todo
