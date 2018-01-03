@@ -17,6 +17,13 @@ const deleteTodo = (req, res) => {
         .then(todo => res.json(todo))
 }
 
+const update = (req, res) => {
+    const { id, value, isChecked } = req.body
+    console.log(id, value, isChecked)
+    Todo.findById(id)
+        .then(todo => todo.update({ value, isChecked }))
+        .then(todo => res.json(todo))
+}
 
 const deleteAll = (req, res) => Todo.destroy({
     where:    {},
@@ -26,6 +33,7 @@ const deleteAll = (req, res) => Todo.destroy({
 module.exports = {
     get,
     post,
+    update,
     deleteTodo,
     deleteAll
 }
