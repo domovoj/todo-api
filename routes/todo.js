@@ -19,7 +19,6 @@ const deleteTodo = (req, res) => {
 
 const update = (req, res) => {
     const { id, value, isChecked } = req.body
-    console.log(id, value, isChecked)
     Todo.findById(id)
         .then(todo => todo.update({ value, isChecked }))
         .then(todo => res.json(todo))
