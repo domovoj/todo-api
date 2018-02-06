@@ -12,7 +12,7 @@ API:
 * `/api/todos` methods:
     * `GET` - Returns all todos
     * `POST` - Creates new todo. Require body parameter `value`, `isChecked` - optional
-    * `PUT` - Updates todo. Require body parameter `id`
+    * `PATCH` - Updates todo. Require body parameter `id`
     * `DELETE` - Deletes todo by id. Require body parameter `id`
 
 * `/api/deleteAll` methods:
@@ -36,7 +36,7 @@ API:
     	headers
     })
     ```
-* __PUT__
+* __PATCH__
     ```js
     const headers = new Headers();
 
@@ -44,7 +44,7 @@ API:
     headers.append('Content-Type', 'application/json');
 
     fetch("/api/todos", {
-      	method: "PUT",
+      	method: "PATCH",
     	body: JSON.stringify({id: 1, value: 'New name for the todo'}),
     	headers
     })
